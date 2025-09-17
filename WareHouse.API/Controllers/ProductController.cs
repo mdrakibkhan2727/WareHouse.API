@@ -5,8 +5,7 @@ namespace WareHouse.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class WarehouseController : ControllerBase
+    public class ProductController : ControllerBase
     {
-
     }
 }

@@ -1,11 +1,12 @@
-using System;
+using Microsoft.EntityFrameworkCore;
+using WareHouse.Data.DataContext;
 
 var builder = WebApplication.CreateBuilder(args);
 
 
 // Add DbContext with PostgreSQL
-//builder.Services.AddDbContext<ApplicationDbContext>(options =>
-//    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // Add services to the container.
 

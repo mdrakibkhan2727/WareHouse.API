@@ -13,7 +13,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <ProjectReference Include="..\WareHouse.BusinessLayer\WareHouse.BusinessLayer.csproj" />
+    <ProjectReference Include="..\WareHouse.Data\WareHouse.Data.csproj" />
   </ItemGroup>
 
 </Project>

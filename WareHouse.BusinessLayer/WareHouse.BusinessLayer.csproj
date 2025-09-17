@@ -6,4 +6,14 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="DTOs\NewFolder\**" />
+    <EmbeddedResource Remove="DTOs\NewFolder\**" />
+    <None Remove="DTOs\NewFolder\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Mappers\" />
+  </ItemGroup>
+
 </Project>
