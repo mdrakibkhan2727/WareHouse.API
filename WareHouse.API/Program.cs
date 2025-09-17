@@ -19,13 +19,11 @@ builder.Services.AddCors(options =>
             "http://localhost:4200"
             )
               .AllowAnyHeader()
-              .AllowAnyMethod()
-              .AllowCredentials();
+              .AllowAnyMethod();
     });
 });
 
-// Add services to the container.
-
+// Add Repositories (DI)
 builder.Services.AddScoped<IWarehouseRepository, WarehouseRepository>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 
