@@ -4,7 +4,7 @@ namespace WareHouse.BusinessLayer.Interfaces
 {
     public interface IProductRepository
     {
-        IEnumerable<Product> GetByWarehouseId(int warehouseId);
+        IEnumerable<Product> GetByWarehouseId(int id);
         void Add(Product product);
         void Save();
     }

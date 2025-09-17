@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using WareHouse.Data.DataContext;
+﻿using WareHouse.Data.DataContext;
 using WareHouse.Data.Models;
 
 namespace WareHouse.BusinessLayer.Interfaces
@@ -16,9 +11,9 @@ namespace WareHouse.BusinessLayer.Interfaces
             _context = context;
         }
 
-        public IEnumerable<Product> GetByWarehouseId(int warehouseId)
+        public IEnumerable<Product> GetByWarehouseId(int id)
         {
-            return _context.Products.Where(p => p.WarehouseId == warehouseId).ToList();
+            return _context.Products.Where(p => p.Id == id).ToList();
         }
 
         public void Add(Product product)

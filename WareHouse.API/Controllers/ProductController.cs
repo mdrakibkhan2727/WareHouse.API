@@ -1,11 +1,10 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using WareHouse.BusinessLayer.Interfaces;
 using WareHouse.Data.Models;
 
 namespace WareHouse.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v1/")]
     [ApiController]
     public class ProductController : ControllerBase
     {
@@ -16,13 +15,13 @@ namespace WareHouse.API.Controllers
             _repo = repo;
         }
 
-        [HttpGet("{warehouseId}")]
-        public IActionResult GetByWarehouse(int warehouseId)
+        [HttpGet("warehouses/{id}/inventory")]
+        public IActionResult GetByWarehouse(int id)
         {
-            return Ok(_repo.GetByWarehouseId(warehouseId));
+            return Ok(_repo.GetByWarehouseId(id));
         }
 
-        [HttpPost]
+        [HttpPost("products")]
         public IActionResult Add(Product product)
         {
             _repo.Add(product);

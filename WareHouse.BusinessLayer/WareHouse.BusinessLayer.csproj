@@ -7,11 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="DTOs\NewFolder\**" />
     <Compile Remove="Mappers\**" />
-    <EmbeddedResource Remove="DTOs\NewFolder\**" />
     <EmbeddedResource Remove="Mappers\**" />
-    <None Remove="DTOs\NewFolder\**" />
     <None Remove="Mappers\**" />
   </ItemGroup>
 
