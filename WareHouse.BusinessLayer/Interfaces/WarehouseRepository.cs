@@ -3,7 +3,7 @@ using WareHouse.Data.Models;
 
 namespace WareHouse.BusinessLayer.Interfaces
 {
-    public class WarehouseRepository
+    public class WarehouseRepository : IWarehouseRepository
     {
         private readonly ApplicationDbContext _context;
         public WarehouseRepository(ApplicationDbContext context)
