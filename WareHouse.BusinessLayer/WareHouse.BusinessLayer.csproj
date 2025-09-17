@@ -8,12 +8,15 @@
 
   <ItemGroup>
     <Compile Remove="DTOs\NewFolder\**" />
+    <Compile Remove="Mappers\**" />
     <EmbeddedResource Remove="DTOs\NewFolder\**" />
+    <EmbeddedResource Remove="Mappers\**" />
     <None Remove="DTOs\NewFolder\**" />
+    <None Remove="Mappers\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Mappers\" />
+    <ProjectReference Include="..\WareHouse.Data\WareHouse.Data.csproj" />
   </ItemGroup>
 
 </Project>
